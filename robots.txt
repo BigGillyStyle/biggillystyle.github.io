@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://BigGillyStyle.github.io/sitemap.xml 
