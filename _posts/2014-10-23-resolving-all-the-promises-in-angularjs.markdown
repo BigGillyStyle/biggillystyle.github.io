@@ -8,14 +8,16 @@ I frequently read that people are "making the migration" from "callback hell" to
 
 [AngularJS docs on $q](https://code.angularjs.org/1.2.26/docs/api/ng/service/$q)  If you scroll down to the bottom of that page, you'll noticed that there's an `all(promises)` method.  We often have AngularJS services provide the promises along with other methods that do "data crunching" on the resolved data, so this is what we were able to do...
 
-      $q.all([
-        templatesQuery.$promise,
-        Account.projectPriorities({id: id}).$promise,
-        CampaignService.getCampaignsPromise()
-      ]).then(function(data) {
-        var templates = data[0];
-        var topThreeProjects = _.first(data[1], 3);
-        var campaigns = data[2];
+{% highlight js linenos %}
+$q.all([
+  templatesQuery.$promise,
+  Account.projectPriorities({id: id}).$promise,
+  CampaignService.getCampaignsPromise()
+]).then(function(data) {
+  var templates = data[0];
+  var topThreeProjects = _.first(data[1], 3);
+  var campaigns = data[2];
+{% endhighlight %}
 
 I realize this is not beautiful code (I'm still traveling down the path of getting things functional and learning "beautiful" as I go), but it (hopefully) demonstrates how you can effectively wait until multiple promises resolve and then get the data from each promise.
 
