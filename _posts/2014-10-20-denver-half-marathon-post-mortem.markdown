@@ -4,7 +4,7 @@ title: Denver Half Marathon "Post Mortem"
 date: '2014-10-20 08:18:15'
 ---
 
-I ran the [Denver Half Marathon](http://running.competitor.com/cgiresults?eId=11&eiId=219&seId=731&pId=56017) on Sunday, and it was my fastest half ever.  I'd say overall there were three main things I did right this time:
+I ran the [Denver Half Marathon](http://running.competitor.com/cgiresults?eId=11&eiId=219&seId=731&pId=118025) on Sunday, and it was my fastest half ever.  I'd say overall there were three main things I did right this time:
 
 1. I followed a relatively [high volume program](http://smile.amazon.com/Hansons-Half-Marathon-Method-Your-Best/dp/1937715191/ref=smi_www_rcolv2_go_smi?_encoding=UTF8&*Version*=1&*entries*=0) (45-50 miles, 6 runs/week) that very gradually built up my mileage over 18 weeks.
 2. I ran a half earlier this year without a plan that just got my legs and my body acclimated to the distance without the intensity associated with an official plan.
