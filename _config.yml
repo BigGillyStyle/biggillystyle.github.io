@@ -13,6 +13,7 @@ markdown: kramdown
 
 highlighter: pygments
 github: [Repository metadata]
+disqus: bgs-github-blog
 
 defaults:
   -
