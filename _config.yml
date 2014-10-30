@@ -13,3 +13,13 @@ markdown: kramdown
 
 highlighter: pygments
 github: [Repository metadata]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Andy Pickler"
+      comments: "true"
