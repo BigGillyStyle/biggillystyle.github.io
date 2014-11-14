@@ -1,5 +1,5 @@
 ---
-title: Remote (-) Separation Between Work and Home
+title: 'Remote Work: (-) Separation Between Work and Home'
 ---
 
 # TL;DR
