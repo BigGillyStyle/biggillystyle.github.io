@@ -1,7 +1,5 @@
 ---
-layout: post
 title: 'Ruby Meta: Module, Class, and Method in One'
-date: '2014-10-18 08:42:43'
 ---
 
 I'm not a huge fan of using "excessive" Ruby metaprogramming on a development team.  First, I'm just not as competent with metaprogramming as I'd like to be.  More importantly, though, I find it to be "easily readable" (an important criteria for team-based coding, in my opinion) only for the original author.  Anyone else has to slowly read the code and think to themselves, "Now what is that doing?".  Anyway, I came up a scenario in which I needed to write 10 classes that varied in a very small way.  Here's the non-meta class:

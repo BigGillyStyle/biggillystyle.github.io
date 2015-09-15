@@ -9,6 +9,7 @@ twitter_username: AndyPickler
 github_username:  BigGillyStyle
 linkedin_username: andypickler
 stackoverflow: BigGillyStyle
+paginate: 5
 
 # Build settings
 markdown: kramdown

@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Denver Half Marathon "Post Mortem"
-date: '2014-10-20 08:18:15'
 ---
 
 I ran the Denver Half Marathon on Sunday, and it was my fastest half ever.  I'd say overall there were three main things I did right this time:

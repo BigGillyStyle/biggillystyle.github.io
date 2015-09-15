@@ -1,3 +1,6 @@
+---
+title: 'Ruby Performance: Map-Join vs. Gsub'
+---
 There are plenty of cases in my Rails applications when I'm sorting through data that I can't sort with just a good database query (which is almost always the best option when possible).  As such, I've become more interested in "algorithmic efficiency".  In my recent work on [exercism.io](http://exercism.io) I came across a programming challenge to do a simple string substituion.  My solution at its core looked like this (`DNA_TO_RNA` is a hash that maps one char to another):
 
 {% highlight ruby %}

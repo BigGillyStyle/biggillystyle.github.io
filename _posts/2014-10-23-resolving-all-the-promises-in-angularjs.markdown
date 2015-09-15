@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Resolving All the Promises in AngularJS
-date: '2014-10-23 12:48:20'
 ---
 
 I frequently read that people are "making the migration" from "callback hell" to promises in JavaScript.  Honestly, I have not been doing JavaScript for so long to have really experienced "callback hell"...but I am embracing promises.  In my more complicated AngularJS pages in my Rails app (we still do mainly server-based routing and page-rendering with one or more AngularJS controllers on most pages) I recently encountered the situation in which I needed several asynchronous server requests to resolve before I could perform some logic.  Thankfully, a co-worker more experienced in JavaScript showed me a solution.
