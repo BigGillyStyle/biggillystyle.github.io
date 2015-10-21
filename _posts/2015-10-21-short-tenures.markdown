@@ -16,6 +16,7 @@ So...without going into any more specifics (you can ask for those in direct comm
 2. relative company stability
 3. a reasonable process and desire to stay current with technologies
 4. a diverse set of technical challenges
+5. the ability to work remote and a company communication and development process that is inclusive of remote employees
 
 Regarding #4 in particular...I have found so far that I have enjoyed being more of a "full stack generalist" than a specialist in anything.  I haven't (yet) found 'that one thing' that I thought I would want to specialize in for the next several years.
 
