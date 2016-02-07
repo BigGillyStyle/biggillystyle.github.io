@@ -14,7 +14,7 @@ paginate: 5
 # Build settings
 markdown: kramdown
 
-highlighter: pygments
+highlighter: rouge
 github: [Repository metadata]
 disqus: bgs-github-blog
 
