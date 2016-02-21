@@ -6,28 +6,28 @@ Back in 2011 the Rails team [deprecated the ActiveSupport::Memoizable module](ht
 
 On our team we had been using the Memoist gem, because I really preferred how it separated any "business logic" in a method from the need to memoize:
 
-{% highlight ruby linenos %}
+```ruby
 def area
   length * width
 end
 memoize :area
-{% endhighlight %}
+```
 
 Very clean indeed, in my opinion.  However, because the gem made it so easy to memoize any code, I believe I stopped thinking critically about the proper use cases for memoization.  As a result, our application memory usage on Heroku was starting to get alarmingly high (for reference: at the time of this writing we are using the latest Rails 4.1.8 and Ruby 2.1.5).  There are definitely many different sources of "memory growth", but I took the time to investigate this more, remove memoization in several places, and resort to "basic Ruby memoization techniques" in most areas.  There were [some posts](https://bibwild.wordpress.com/2011/07/14/beware-of-activesupportmemoizable/) back when Memoizable was removed indicating that possibly the overhead of the Memoizable module technique was quite powerful and useful on one hand but also resulted in some negative performance on the other.  With that in mind, I thought I'd share some of the memoization techniques I uncovered that I've decided are very Ruby-like (in my opinion):
 
 1) Memoization for a method that will not return nil or a falsey value
 
-{% highlight ruby linenos %}
+```ruby
 def area
   @area ||= length * width
 end
-{% endhighlight %}
+```
 
 This is the most basic technique and works for methods that (1) don't take arguments and (2) don't return nil or falsey values.  This covers probably at least 50% of my use cases, if not more.
 
 2) Memoization for a multiline method
 
-{% highlight ruby linenos %}
+```ruby
 def foo
   @foo ||= begin
     # a calculation here
@@ -35,11 +35,11 @@ def foo
     # @foo assignment here
   end
 end
-{% endhighlight %}
+```
 
 3) Memoization for a method that *may* return nil or a falsey value
 
-{% highlight ruby linenos %}
+```ruby
 def foo
   unless defined? @foo
     # a calculation here
@@ -48,18 +48,18 @@ def foo
   end
   @foo
 end
-{% endhighlight %}
+```
 
 4) Memoization for methods that have arguments
 
-{% highlight ruby linenos %}
+```ruby
 def foo(bar)
   @foo ||= Hash.new do |h, key|
     h[key] = # my calculated value for this argument
   end
   @foo[bar]
 end
-{% endhighlight %}
+```
 
 Justin Weiss has [an excellent article](http://www.justinweiss.com/blog/2014/07/28/4-simple-memoization-patterns-in-ruby-and-one-gem/) that explains this technique very well and shows how you can use this for any number of arguments.
 

@@ -3,21 +3,21 @@ title: 'Ruby Performance: Map-Join vs. Gsub'
 ---
 There are plenty of cases in my Rails applications when I'm sorting through data that I can't sort with just a good database query (which is almost always the best option when possible).  As such, I've become more interested in "algorithmic efficiency".  In my recent work on [exercism.io](http://exercism.io) I came across a programming challenge to do a simple string substituion.  My solution at its core looked like this (`DNA_TO_RNA` is a hash that maps one char to another):
 
-{% highlight ruby %}
+```ruby
   dna_str.gsub(/[#{DNA_TO_RNA.keys.join}]/, DNA_TO_RNA)
-{% endhighlight %}
+```
 
 ...however, as I perused other students' solutions, I noticed that a more common approach was this...
 
-{% highlight ruby %}
+```ruby
   dna_str.each_char.map {|char| DNA_TO_RNA[char]}.join
-{% endhighlight %}
+```
 
 I was curious about either of the two was a better performing algorithm.  Truthfully I liked the readability of the latter solution, as my solution would require many Rubyists to look up [String#gsub](http://www.ruby-doc.org/core-2.1.4/String.html#method-i-gsub) to see why/how this worked.  In fact, I only discovered this technique while reading through the Ruby docs as part of this exercise.
 
 Here is the benchmark that I ran:
 
-{% highlight ruby linenos %}
+```ruby
 Benchmark.ips do |x|
   x.report('dna_convert_with_gsub') do |times|
     i = 0
@@ -37,7 +37,7 @@ Benchmark.ips do |x|
 
   x.compare!
 end
-{% endhighlight %}
+```
 
 ...and here are the benchmark results:
 

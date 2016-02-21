@@ -8,9 +8,9 @@ At my company we're using [Mongoid](http://mongoid.org/en/mongoid/index.html) to
 
 Here's a snippet from our code:
 
-{% highlight ruby %}
+```ruby
 AccountCalculation.where('campaign_calculations.campaign_id' => campaign.id)
-{% endhighlight %}
+```
 
 `CampaignCalculation` is an "embeds_many" relation on `AccountCalculation`, and each `CampaignCalculaion` has an integer field `campaign_id` defined.
 
@@ -18,8 +18,8 @@ AccountCalculation.where('campaign_calculations.campaign_id' => campaign.id)
 
 This one was a little tricker, in that the type conversion (from `String` to `BSON::ObjectID` in this case) is not handled automatically.  By default each ID for a MongoID document is of type `BSON::ObjectID`.  Here's a related snippet:
 
-{% highlight ruby %}
+```ruby
 OldProject.where('project_segments._id' => BSON::ObjectId.from_string(id_s))
-{% endhighlight %}
+```
 
 I hope these quick tips will save a few people the hassle of trying to figure this out.  Even worse...we originally were finding ourselves getting a large dataset back from our querying and using [Enumerable](http://ruby-doc.org/core-2.1.5/Enumerable.html) methods to query by embedded attributes.  You'll use more memory on your server that way, of course, and it's significantly slower than having MongoDB handle the query.

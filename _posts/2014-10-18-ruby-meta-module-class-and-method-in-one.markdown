@@ -4,7 +4,7 @@ title: 'Ruby Meta: Module, Class, and Method in One'
 
 I'm not a huge fan of using "excessive" Ruby metaprogramming on a development team.  First, I'm just not as competent with metaprogramming as I'd like to be.  More importantly, though, I find it to be "easily readable" (an important criteria for team-based coding, in my opinion) only for the original author.  Anyone else has to slowly read the code and think to themselves, "Now what is that doing?".  Anyway, I came up a scenario in which I needed to write 10 classes that varied in a very small way.  Here's the non-meta class:
 
-{% highlight ruby linenos %}
+```ruby
 module Pricing
   module Fixed
 
@@ -16,11 +16,11 @@ module Pricing
 
   end
 end
-{% endhighlight %}
+```
 
 Yep, that's it.  And there needed to be Hour2, Hour3, Hour4, ... classes all the way up to Hour10.  To this point in my Ruby career I had "defined methods" but never classes (and classes within module).  After a bunch of Googling here's my solution:
 
-{% highlight ruby linenos %}
+```ruby
 module Pricing
   module Fixed
 
@@ -36,7 +36,7 @@ module Pricing
 
   end
 end
-{% endhighlight %}
+```
 
 In my Rails app I just put that in a config/initializers file, so that the classes would be defined right upon startup.  I'll examine some of the details...
 

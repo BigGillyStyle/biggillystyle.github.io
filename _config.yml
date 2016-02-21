@@ -10,9 +10,13 @@ github_username:  BigGillyStyle
 linkedin_username: andypickler
 stackoverflow: users/961045/biggillystyle
 paginate: 5
+exclude: [vendor]
+gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 
 highlighter: rouge
 github: [Repository metadata]
