@@ -27,14 +27,15 @@ You'll notice that I've also defined my directives and corresponding controllers
 
 The code I've written is not actually the *end goal*, though it may be for our Angular 1.x codebase, because we will most likely face the decision whenever we transition to Angular 2 as to whether to use ES7 decorators and/or TypeScript.  At this time, though, this incremental change appears to me to be the proper step in the right direction.
 
-In our Angular chat codebase, we actually did start out with a single `ChatController`, as it made sense in the beginning stages to keep things simple.  As more of us started working simultaneously in the same area and as `ChatController` became larger and took on too many responsibilities, we started breaking our Angular templates down into element-level directives ("components") to (1) follow SRP, (2) make it easier to reason about what a single component was doing, and (3) allow for multiple people to work on the chat codebase at once without as many merge conflicts.  I think any of us who have worked on the Angular chat codebase can talk about how we can start taking some of these principles to the other areas of our Angular application (which as of this writing stands at about 40,000 lines of code!).  It is not something that can be done all at once, but in fact is much more practical in that a little bit of change can be made at a time.  Oh...and it should be noted that standalone controllers (i.e. when you define `ng-controller` in a template and then write a controller function) are also *completely removed* from Angular 2.  For this reason and the others I've mentioned, we'll need to start moving our Angular functionality into a component structure.
+In our Angular chat codebase, we actually did start out with a single standalone controller, as it made sense in the beginning stages to keep things simple.  As more of us started working simultaneously in the same area and as this controller became larger and took on too many responsibilities, we started breaking our Angular templates down into element-level directives ("components") to (1) follow SRP, (2) make it easier to reason about what a single component was doing, and (3) allow for multiple people to work on the chat codebase at once without as many merge conflicts.  I think any of us who have worked on the Angular chat codebase can talk about how we can start taking some of these principles to the other areas of our Angular application (which as of this writing stands at about 40,000 lines of code!).  It is not something that can be done all at once, but in fact is much more practical in that a little bit of change can be made at a time.  Oh...and it should be noted that standalone controllers (i.e. when you define `ng-controller` in a template and then write a controller function) are also *completely removed* from Angular 2.  For this reason and the others I've mentioned, we'll need to start moving our Angular functionality into a component structure.
 
 ## The Testing Story ##
 
 It is worth showing what some of the benefits are to taking a pure-JS, POJO-based approach to writing using ES6 classes like I've suggested.  Here's an admittedly simple example of the spec for the `<chat-client>` directive's controller (which is the only place for the directive where any logic exists):
 
 The Controller Class
-```javascript
+
+```
 const ChatClientListControllerContext = (() => {
   class ChatClientListController {
     constructor(ChatClientManager) {
@@ -55,7 +56,8 @@ const ChatClientListControllerContext = (() => {
 ```
 
 The Test Code
-```javascript
+
+```coffeescript
 #= require application
 
 describe 'ChatClientListController', ->
