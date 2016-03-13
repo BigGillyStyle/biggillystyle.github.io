@@ -11,7 +11,9 @@ linkedin_username: andypickler
 stackoverflow: users/961045/biggillystyle
 paginate: 5
 exclude: [vendor]
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
 
 # Build settings
 markdown: kramdown
