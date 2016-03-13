@@ -6,12 +6,12 @@ At work we have a reasonably large Rails app that contains an also-reasonably-la
 
 Regarding my recent PR and the motivation/reason behind taking an ES6 class-based approach to our Angular codebase...here are some articles for reference (in ascending chronological order):
 
-1. http://blog.thoughtram.io/angularjs/es6/2015/01/23/exploring-angular-1.3-using-es6.html
-2. http://www.sitepoint.com/writing-angularjs-apps-using-es6/
-3. http://www.michaelbromley.co.uk/blog/350/exploring-es6-classes-in-angularjs-1-x
-4. http://essenceofcode.com/2015/08/21/awesome-angular-controllers-with-es6-6-easy-steps/
-5. http://chariotsolutions.com/blog/post/hitchikers-guide-ecmascript-2015es6-typescript-angular2-beginner/
-6. http://learnangular2.com/lifecycle/
+1. [http://blog.thoughtram.io/angularjs/es6/2015/01/23/exploring-angular-1.3-using-es6.html](http://blog.thoughtram.io/angularjs/es6/2015/01/23/exploring-angular-1.3-using-es6.html)
+2. [http://www.sitepoint.com/writing-angularjs-apps-using-es6/](http://www.sitepoint.com/writing-angularjs-apps-using-es6/)
+3. [http://www.michaelbromley.co.uk/blog/350/exploring-es6-classes-in-angularjs-1-x](http://www.michaelbromley.co.uk/blog/350/exploring-es6-classes-in-angularjs-1-x)
+4. [http://essenceofcode.com/2015/08/21/awesome-angular-controllers-with-es6-6-easy-steps/](http://essenceofcode.com/2015/08/21/awesome-angular-controllers-with-es6-6-easy-steps/)
+5. [http://chariotsolutions.com/blog/post/hitchikers-guide-ecmascript-2015es6-typescript-angular2-beginner/](http://chariotsolutions.com/blog/post/hitchikers-guide-ecmascript-2015es6-typescript-angular2-beginner/)
+6. [http://learnangular2.com/lifecycle/](http://learnangular2.com/lifecycle/)
 
 In reading through each of these articles again, here is a summary of their recommendations on taking this approach:
 
