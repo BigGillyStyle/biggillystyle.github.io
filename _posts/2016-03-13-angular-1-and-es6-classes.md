@@ -35,7 +35,7 @@ It is worth showing what some of the benefits are to taking a pure-JS, POJO-base
 
 The Controller Class
 
-```
+```javascript
 const ChatClientListControllerContext = (() => {
   class ChatClientListController {
     constructor(ChatClientManager) {
