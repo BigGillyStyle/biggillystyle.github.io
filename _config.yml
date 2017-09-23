@@ -11,7 +11,7 @@ linkedin_username: andypickler
 stackoverflow: users/961045/biggillystyle
 paginate: 5
 exclude: [vendor]
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
