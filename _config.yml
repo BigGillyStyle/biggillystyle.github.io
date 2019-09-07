@@ -3,10 +3,10 @@ title: BigGillyStyle's Blog
 email: andy.pickler@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   My thoughts on software development, fitness, and other ramblings.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.biggillystyle.com" # the base hostname & protocol for your site
-twitter_username: AndyPickler
-github_username:  BigGillyStyle
+baseurl: '' # the subpath of your site, e.g. /blog/
+url: 'http://www.biggillystyle.com' # the base hostname & protocol for your site
+twitter_username: BigGillyStyle
+github_username: BigGillyStyle
 linkedin_username: andypickler
 stackoverflow: users/961045/biggillystyle
 paginate: 5
@@ -25,11 +25,10 @@ github: [Repository metadata]
 disqus: bgs-github-blog
 
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
+  - scope:
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
-      author: "Andy Pickler"
+      layout: 'post'
+      author: 'Andy Pickler'
       comments: true
